@@ -12,5 +12,9 @@ FROM mcr.microsoft.com/azure-functions/node:4-node16-core-tools
 # local.settings.json using `"AzureWebJobsStorage": "UseDevelopmentStorage=true"`
 # RUN sudo -u node npm install -g azurite
 
+
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
 # [Optional] Uncomment if you want to install more global node packages
 # RUN sudo -u node npm install -g <your-package-list-here>

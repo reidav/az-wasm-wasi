@@ -9,11 +9,8 @@ use wasm_bindgen::prelude::*;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-extern {
-    fn alert(s: &str);
-}
-
-#[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, from rust / wasm!");
+pub fn greet(name: &str) -> std::string::String {
+    let mut hello = "Hello ".to_owned();
+    hello.push_str(name);
+    return hello;
 }
